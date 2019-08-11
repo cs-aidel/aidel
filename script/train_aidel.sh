@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir ./data/lognormal_190M/model/
+mkdir -p ./data/lognormal_190M/model/
 
 echo "================ train aidel on the whole dataset================="
 python2.7 ./training/train_aidel.py
