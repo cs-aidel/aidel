@@ -25,8 +25,8 @@ The B+-tree use a popular implementation, called `stx::btree`.<br>
 The machine should install [`sklearn`](https://scikit-learn.org/stable/), support `avx` instructions.<br>
 1.compile: <br>
 ```
->> mkdir build<br>
->> make
+~$ mkdir build<br>
+~$ make
 ```
 
 > We compile all implementations under director `"./build/"` with -Ofast option.
