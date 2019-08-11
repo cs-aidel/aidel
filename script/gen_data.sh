@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir ./data
+
 echo "==================Generate lognormal data: 190M=============="
 ./build/gen_lognormal
 
