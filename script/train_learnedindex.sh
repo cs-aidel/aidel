@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir ./data/learned_index/model_lognormal
+mkdir -p ./data/learned_index/model_lognormal
 
 echo "================ train learned indexes on the whole dataset ================="
 python2.7 ./training/learned_index.py
