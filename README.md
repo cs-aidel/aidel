@@ -1,6 +1,16 @@
+# Descriptions
+
+AIDEL is a `scalale learned index structure`, which is motivated from the paper `'The Case for Learned Index structures'`.<br>
+
+> Kraska T, Beutel A, Chi E H, et al. The case for learned index structures[C]//Proceedings of the 2018 International Conference on Management of Data. ACM, 2018: 489-504. <br>
+
+We compare AIDEL with the state-of-the-art index structures, including [`B+-tree`](http://panthema.net/2007/stx-btree/), [`FAST`](http://kaldewey.com/pubs/FAST__SIGMOD10.pdf), [`spline interpolation`](http://databasearchitects.blogspot.com/2017/12/the-case-for-b-tree-index-structures.html), and [`the learned indexes`](https://arxiv.org/abs/1712.01208).
+
+# The implementations
+
+
 # Requirements:
 
-AIDEL is first trained with sklearn, then we optimize AIDEL with C++ to get high performance.<br> 
 The machine should install [`sklearn`](https://scikit-learn.org/stable/), support `avx` instructions.
 
 # Run:
