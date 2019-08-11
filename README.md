@@ -16,7 +16,7 @@ We implement the learned indexes following the design and configurations of [the
 The B+-tree use a popular implementation, called `stx::btree`.<br>
 > [http://panthema.net/2007/stx-btree/](http://panthema.net/2007/stx-btree/)<br>
 
-[`FAST`](http://kaldewey.com/pubs/FAST__SIGMOD10.pdf) and [`spline interpolation`](http://databasearchitects.blogspot.com/2017/12/the-case-for-b-tree-index-structures.html) are the cache- and SIMD-conscious variants of B+-tree, where `FAST` is the state-of-the-art SIMD optimize structure and the spline interpolation is a fixed-height B+-tree. For the two structures, we use the implementations from `Standford Future Data System`.
+[`FAST`](http://kaldewey.com/pubs/FAST__SIGMOD10.pdf) and [`spline interpolation`](http://databasearchitects.blogspot.com/2017/12/the-case-for-b-tree-index-structures.html) are the cache- and SIMD-conscious variants of B+-tree, where [`FAST`](http://kaldewey.com/pubs/FAST__SIGMOD10.pdf) is the state-of-the-art SIMD optimize structure and the [`spline interpolation`](http://databasearchitects.blogspot.com/2017/12/the-case-for-b-tree-index-structures.html) is a fixed-height B+-tree. For the two structures, we use the implementations from [`Standford Future Data System`](https://github.com/stanford-futuredata/index-baselines).
 > [https://github.com/stanford-futuredata/index-baselines](https://github.com/stanford-futuredata/index-baselines)
 
 
@@ -25,7 +25,7 @@ The B+-tree use a popular implementation, called `stx::btree`.<br>
 The machine should install [`sklearn`](https://scikit-learn.org/stable/), support `avx` instructions.<br>
 1.compile: <br>
 ```
-~$ mkdir build<br>
+~$ mkdir build
 ~$ make
 ```
 
@@ -41,7 +41,7 @@ The machine should install [`sklearn`](https://scikit-learn.org/stable/), suppor
 
 3.train the models:<br>
 ```
-~$ ./script/train_aidel.sh<br>
+~$ ./script/train_aidel.sh
 ~$ ./script/train_learnedindex.sh
 ```
 
