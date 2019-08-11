@@ -24,33 +24,38 @@ The B+-tree use a popular implementation, called `stx::btree`.<br>
 # How to run:
 The machine should install [`sklearn`](https://scikit-learn.org/stable/), support `avx` instructions.<br>
 1.compile: <br>
+```
 > mkdir build<br>
 > make
+```
 
->> We compile all implementations under director `"./build/"` with -Ofast option.
+> We compile all implementations under director `"./build/"` with -Ofast option.
 
 2.gen data:<br>
-> ./script/gen_data.sh
 
->> First generate the dataset `'lognormal.sorted.190M'`, then respectively sample `10%` and `1%` data, finally `disorder` the data.
+``` > ./script/gen_data.sh```
+
+> First generate the dataset `'lognormal.sorted.190M'`, then respectively sample `10%` and `1%` data, finally `disorder` the data.
 
 3.train the models:<br>
+```
 > ./script/train_aidel.sh<br>
 > ./script/train_learnedindex.sh
+```
 
->> All models are trained in [`sklearn`](https://scikit-learn.org/stable/), and are stored under the directory `"./data/"` to be accessed by C++ to obtian high performance.
+> All models are trained in [`sklearn`](https://scikit-learn.org/stable/), and are stored under the directory `"./data/"` to be accessed by C++ to obtian high performance.
 
 4.evaluate static search:<br>
-> ./script/run_search.sh
+```> ./script/run_search.sh```
 
->> Compare the lookup performance without insertions.
+> Compare the lookup performance without insertions.
 
 5.evaluate insertion performance when sample 10% of the data:<br>
-> ./script/run_insert_sample_0.1.sh
+```> ./script/run_insert_sample_0.1.sh```
 
->> First sample 10% of the data for training and then test the insertion performance by inserting the data from 1x to 10x than the training data.
+> First sample 10% of the data for training and then test the insertion performance by inserting the data from 1x to 10x than the training data.
 
 6.evaluate insertion performance when sample 1% of the data:<br>
-> ./script/run_insert_sample_0.01.sh
+```> ./script/run_insert_sample_0.01.sh```
 
->> First sample 1% of the data for training and then test the insertion performance by inserting the data from 10x to 100x than the training data.
+> First sample 1% of the data for training and then test the insertion performance by inserting the data from 10x to 100x than the training data.
