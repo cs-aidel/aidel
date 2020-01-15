@@ -30,14 +30,6 @@ class MultiRegression:
 
 
 	def train(self, X, Y):
-		'''
-		训练过程：
-		1.往前跨一步进行训练
-		2.如果错误 < maxError，则再往前跨一步，直到错误 > maxError, 进行3
-		3.如果错误 > maxError，则回退一小步，直到错误 < maxError, 完成训练
-		4.如果回退到最后一步，仍然 > maxError，则减少步的大小，重复3,4
-		本例中设置最大步宽1000，最小步宽1
-		'''
 
 		print('training begin, length of training_data is: {0}'.format(X.shape[0]))
 
@@ -85,10 +77,7 @@ class MultiRegression:
 
 
 	def _train(self, X, Y, step):
-		'''
-		不断回退一小步，直到错误 < maxerror
-		如果最后一步仍然 > maxerror, 则回退更小的一步
-		'''
+		
 		while len(X) <= step:
 			step = int(step * self._learningRate)
 			if step <= 10:
@@ -145,12 +134,7 @@ class MultiRegression:
 
 
 	def predict(self, key):
-		'''
-		根据数据选择合适的模型进行预测
-		对于批处理的数据，因为每个都对应不同的模型，所以要单个处理
-
-		return：一个三元组，表示(predict, neg_y, fos_y)
-		'''
+		
 		lo = 0
 		hi = len(self._partision)
 		while lo < hi:
